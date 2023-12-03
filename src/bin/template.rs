@@ -1,10 +1,12 @@
+use itertools::Itertools;
 use regex::Regex;
 use std::char;
+use std::cmp::{max, min};
 use std::collections::{HashMap, HashSet};
 use std::env;
 use std::fs;
 
-const PART: u32 = 1;
+const PART: usize = 1;
 
 fn solve_p1(input: String) -> String {
     return "".to_string();
