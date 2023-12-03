@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+lastday=$(find "src/bin/" -type f -regex 'src/bin/day[0-9]+\.rs' | grep -o '[0-9]*' | sort -n | tail -1)
+today=$(printf "%02d" $(( lastday + 1 )))
+
+cp -r "src/bin/template.rs" "src/bin/day$today.rs"
