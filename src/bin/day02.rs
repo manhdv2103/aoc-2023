@@ -1,3 +1,4 @@
+#![allow(unused_imports)]
 use itertools::Itertools;
 use regex::Regex;
 use std::{

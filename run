@@ -7,4 +7,4 @@ if ! [[ "$day" =~ ^[0-9]+$ ]] ; then
 fi
 day=$(printf "%02d" "$day")
 
-echo -e "src/bin/day$day.rs\ninput/day$day" | entr -c bash -c "RUSTFLAGS=-Aunused_imports cargo build -q --bin day$day && export TIMEFORMAT=$'\nBenchmark: %3lR' && time ./target/debug/day$day"
+echo -e "src/bin/day$day.rs\ninput/day$day" | entr -c bash -c "cargo build -q --bin day$day && export TIMEFORMAT=$'\nBenchmark: %3lR' && time ./target/debug/day$day"
